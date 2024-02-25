@@ -29,11 +29,9 @@ modules:
     install:
       - helix
       - starship
-      - steam
       - nodejs
       - lazygit
       - gamescope
-      - wine
       - winetricks
       - protontricks
       - virt-manager
