@@ -29,6 +29,9 @@ modules:
       - nodejs
       - lazygit
       - gamescope
+      - wine
+      - winetricks
+      - protontricks
       - virt-manager
       - tlp
       - tlp-rdw
