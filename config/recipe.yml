@@ -30,10 +30,12 @@ modules:
       - lazygit
       - gamescope
       - virt-manager
+      - tlp
+      - tlp-rdw
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
-
+      - power-profiles-daemon
   - type: default-flatpaks
     notify: true # Send notification after install/uninstall is finished (true/false)
     system:
@@ -55,4 +57,11 @@ modules:
       remove:
         # - org.gnome.eog
 
+  - type: systemd
+    system:
+      enabled:
+        - tlp.service
+      mask:
+        - system-rfkill.service
+        - system-rfkill.socket
   - type: signing # this sets up the proper policy & signing files for signed images to work fully
